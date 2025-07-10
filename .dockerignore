@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+README.md
+.github/
+
+# Documentation
+*.md
+docs/
+examples.md
+
+# Development files
+.vscode/
+.idea/
+
+# Test files
+*_test.go
+coverage.out
+test/
+
+# Build artifacts
+spacecrafts-fiber*
+*.exe
+
+# Dependencies (will be downloaded during build)
+vendor/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,0 +1,15 @@
+{
+  "go.toolsManagement.checkForUpdates": "local",
+  "go.useLanguageServer": true,
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package",
+  "go.formatTool": "goimports",
+  "go.lintTool": "golint",
+  "go.testFlags": ["-v", "-race"],
+  "go.coverOnSave": false,
+  "go.coverOnSingleTest": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  }
+}
