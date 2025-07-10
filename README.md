@@ -31,7 +31,7 @@
 
 ### Prerequisites
 
-- Go 1.21 or higher
+- Go 1.24 or higher
 - Docker (optional)
 
 ### Local Development
@@ -116,7 +116,7 @@ Triggered on push and pull requests to `main` and `develop` branches:
 
 1. **Test Job**:
 
-   - Tests against Go 1.21, 1.22, 1.23 and 1.24
+   - Tests against Go 1.24
    - Runs `go vet`, `staticcheck`, and `golint`
    - Executes tests with race detection and coverage
    - Uploads coverage to Codecov
