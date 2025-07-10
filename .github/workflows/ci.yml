@@ -122,9 +122,11 @@ jobs:
         run: govulncheck ./...
 
   docker:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     needs: [test, build]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      packages: write
 
     steps:
       - uses: actions/checkout@v4
@@ -152,6 +154,14 @@ jobs:
             type=semver,pattern={{major}}
             type=sha,prefix={{branch}}-
             type=raw,value=latest,enable={{is_default_branch}}
+          labels: |
+            maintainer=gperdomor
+            org.opencontainers.image.title=Spacecrafts Fiber
+            org.opencontainers.image.description=Spacecrafts Fiber API
+            org.opencontainers.image.url=https://github.com/gperdomor/spacecrafts-fiber
+            org.opencontainers.image.vendor=gperdomor
+            org.opencontainers.image.licenses=MIT
+            org.opencontainers.image.source=https://github.com/gperdomor/spacecrafts-fiber
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
